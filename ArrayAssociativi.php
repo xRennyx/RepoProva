@@ -152,3 +152,69 @@ $arr = $numeri;
 array_splice($arr, 3, 3); //rimuove 3 elementi dall'indice 3
 var_dump($arr);
 echo "<br><br>";
+//count()
+echo "----- COUNT() -----";
+echo "<br>";
+//conta il numero di elementi nell'array
+echo count($frutta);
+echo "<br><br>";
+
+//array_push()
+echo "----- ARRAY_PUSH() -----";
+echo "<br>";
+//aggiunge uno o più elementi alla fine dell'array
+array_push($frutta, "Pera", "Pesca");
+var_dump($frutta);
+echo "<br><br>";
+
+//array_pop()
+echo "----- ARRAY_POP() -----";
+echo "<br>";
+//rimuove l'ultimo elemento dell'array
+$ultimo = array_pop($frutta);
+echo "Rimosso: $ultimo";
+echo "<br>";
+var_dump($frutta);
+echo "<br><br>";
+
+//array_unique()
+echo "----- ARRAY_UNIQUE() -----";
+echo "<br>";
+//rimuove i valori duplicati
+$duplicati = ["Mela", "Banana", "Mela", "Uva", "Banana"];
+var_dump(array_unique($duplicati));
+echo "<br><br>";
+
+//implode()
+echo "----- IMPLODE() -----";
+echo "<br>";
+//trasforma un array in una stringa
+$stringa = implode(", ", $frutta);
+echo $stringa;
+echo "<br><br>";
+
+//explode()
+echo "----- EXPLODE() -----";
+echo "<br>";
+//trasforma una stringa in un array
+$testo = "rosso,verde,blu,giallo";
+$colori = explode(",", $testo);
+var_dump($colori);
+echo "<br><br>";
+
+//array_reduce()
+echo "----- ARRAY_REDUCE() -----";
+echo "<br>";
+//riduce l'array a un singolo valore
+$somma = array_reduce($numeri, fn($carry, $n) => $carry + $n, 0);
+echo "Somma: $somma";
+echo "<br><br>";
+
+//shuffle()
+echo "----- SHUFFLE() -----";
+echo "<br>";
+//mescola casualmente l'array
+$mescola = $numeri;
+shuffle($mescola);
+var_dump($mescola);
+echo "<br><br>";
